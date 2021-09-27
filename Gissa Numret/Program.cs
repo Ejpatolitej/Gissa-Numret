@@ -21,16 +21,28 @@ namespace Gissa_Numret
 
                     Console.WriteLine("\tVill du spela igen? Ja / Nej");
                     Console.Write("\t");
-                    string keepPlaying = Console.ReadLine();
-                    if (keepPlaying.ToUpper() == "JA")
+                    bool keepAsking = true;
+                    while (keepAsking)
                     {
+                        string keepPlaying = Console.ReadLine();
 
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\tTack för att du spelade!");
-                        keepRunning = false;
+                        if (keepPlaying.ToUpper() == "JA")
+                        {
+                            keepAsking = false;
+                        }
+                        else if (keepPlaying.ToUpper() == "NEJ")
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\tTack för att du spelade!");
+                            keepAsking = false;
+                            keepRunning = false;
+                        }
+                        else
+                        {
+                            //Console.Clear();
+                            Console.WriteLine("\tNu skrev du något konstigt, försök igen! Ja / Nej");
+                        }
+
                     }
                 }
                 catch (Exception)
