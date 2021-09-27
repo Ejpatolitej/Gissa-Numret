@@ -20,10 +20,10 @@ namespace Gissa_Numret
                     Console.Clear();
 
                     Console.WriteLine("\tVill du spela igen? Ja / Nej");
-                    Console.Write("\t");
                     bool keepAsking = true;
                     while (keepAsking)
                     {
+                        Console.Write("\t");
                         string keepPlaying = Console.ReadLine();
 
                         if (keepPlaying.ToUpper() == "JA")
@@ -39,7 +39,7 @@ namespace Gissa_Numret
                         }
                         else
                         {
-                            //Console.Clear();
+                            Console.Clear();
                             Console.WriteLine("\tNu skrev du något konstigt, försök igen! Ja / Nej");
                         }
 
